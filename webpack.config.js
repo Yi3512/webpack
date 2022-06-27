@@ -40,7 +40,26 @@ module.exports = {
         // less-loader 先把less代码转换成css
         // css-loader 再把css代码转换成webpack 可以识别的js代码
         // style-loader 在把css代码插入到 dom中
-        use:['style-loader','css-loader','less-loader']
+        use: ['style-loader', 'css-loader', 'less-loader'],
+      },
+      {
+        test: /\.(png|jpg|gif|jpge)$/i,
+        type: 'asset',
+        parser:{// 解析器 规则
+            dataUrlCondition:{
+                maxSize: 2 * 1024,
+            }
+        }
+
+        
+        // 在导出一个 data URI 和发送一个单独的文件之间自动选择
+        // 如果你设置的是asset模式
+        // 以8KB大小区分图片文件
+        // 小于8KB的, 把图片文件转base64, 打包进js中
+        // 大于8KB的, 直接把图片文件输出到dist下
+
+        // type: 'asset/resource' // 发送一个单独的文件并导出 URL
+        // type: 'asset/inline' // 导出一个资源的 data URI
       },
     ],
   },

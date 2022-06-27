@@ -4,3 +4,6 @@
   background-color: green;
   color: '#000';
 }
+body {
+  background: url('../assets/logo_small.png') no-repeat center;
+}

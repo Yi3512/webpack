@@ -1,6 +1,16 @@
+import './banner.js';
+import './tabs.js';
 
-import './banner.js'
-import './tabs.js'
+import './styles/index.css';
+import './styles/index.less';
 
-import './styles/index.css'
-import './styles/index.less'
+
+import imgUrl from './assets/1.gif';
+let img = document.createElement('img');
+img.src = imgUrl;
+document.body.appendChild(img);
+
+import imgUrl2 from './assets/logo_small.png';
+let img2 = document.createElement('img');
+img2.src = imgUrl2;
+document.body.appendChild(img2);
