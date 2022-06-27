@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
+  mode: 'development',
   entry: './src/main.js', //入口配置
   output: {
     path: path.resolve(__dirname, 'lib'), //出口路径 绝对路径
