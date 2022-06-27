@@ -45,13 +45,12 @@ module.exports = {
       {
         test: /\.(png|jpg|gif|jpge)$/i,
         type: 'asset',
-        parser:{// 解析器 规则
-            dataUrlCondition:{
-                maxSize: 2 * 1024,
-            }
-        }
-
-        
+        parser: {
+          // 解析器 规则
+          dataUrlCondition: {
+            maxSize: 2 * 1024,
+          },
+        },
         // 在导出一个 data URI 和发送一个单独的文件之间自动选择
         // 如果你设置的是asset模式
         // 以8KB大小区分图片文件
@@ -60,6 +59,12 @@ module.exports = {
 
         // type: 'asset/resource' // 发送一个单独的文件并导出 URL
         // type: 'asset/inline' // 导出一个资源的 data URI
+      },
+      {
+        test: /\.(eot|svg|ttf|woff|woff2)$/,
+        generator:{
+            filename: 'font-[name].[hash:6][ext]'
+        }
       },
     ],
   },

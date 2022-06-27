@@ -4,6 +4,7 @@ import './tabs.js';
 import './styles/index.css';
 import './styles/index.less';
 
+import './assets/fonts/iconfont.css'
 
 import imgUrl from './assets/1.gif';
 let img = document.createElement('img');
