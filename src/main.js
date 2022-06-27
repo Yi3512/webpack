@@ -6,6 +6,8 @@ import './styles/index.less';
 
 import './assets/fonts/iconfont.css';
 
+import './app.vue'
+
 import imgUrl from './assets/1.gif';
 let img = document.createElement('img');
 img.src = imgUrl;
